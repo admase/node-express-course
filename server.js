@@ -3,7 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 
 // Body parser for application/json
-app.use(bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const mockUserData = [
   { name: 'Mark' },
